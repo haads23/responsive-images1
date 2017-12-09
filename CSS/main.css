@@ -1,0 +1,118 @@
+/*******************************************************************************************************************************************
+
+LAYOUT/MEDIA QUERIES
+
+In your webpage there will be 3 layouts. Use percentages to control the width of the <li> elements and the margins between them.
+
+1. Less than 600px - one column layout
+
+2. Between 600px and 1200px - two column layout
+
+3. Above 1200px - four column layout
+
+
+TRANSITIONS AND TRANSFORMATIONS
+
+Each image should have a transition and transform applied in CSS
+
+The transition property should be your transform which must have a minimum duration of 0.2s and must specify a transition-timing-function property such as "ease-in".
+
+You can use any tranform you wish:  scale, rotate, translate etc.
+
+The transition effect should start with a hover event over any image.
+
+
+
+IMAGE ATTRIBUTION
+
+All images used belong to:
+
+Markus Spiske - https://500px.com/markusspiske (Links to an external site.)Links to an external site. 
+
+Yinan Chen - https://500px.com/webmaster85 (Links to an external site.)Links to an external site. 
+
+Fahim Akhter - https://500px.com/fahimakhter (Links to an external site.)Links to an external site. 
+
+
+*********************************************************************************************************************************************/
+
+h1 {
+    text-align: center;
+    text-decoration-color: black;
+    text-decoration-line: underline;
+}
+
+body {
+    background-color: peachpuff;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    line-height: 1.5;
+}
+
+
+/*** Remove bulliets ***/
+
+ul {
+    list-style: none;
+}
+
+
+/*** float will allow us to have more than one img beside each other ***/
+
+li {
+    float: left;
+    margin-top: 2.5%;
+
+}
+
+
+/*** MAXIUM-WIDTH & TRANSITION/TRANSFORM ***/
+
+img {
+    width: 90%;
+    transition: transform 0.5s ease-in-out;
+}
+
+img:hover {
+    transform: scale(-0.5);
+}
+
+figcaption {
+    text-align: center;
+}
+
+
+/********** MEDIA QUERIES & TRANSITION/TRANSFORM **********/
+
+@media screen and (min-width:600px) {
+
+    li {
+        width: 50%;
+    }
+
+    img:hover {
+        transform: rotate(360deg);
+        z-index: 20;
+    }
+    figcaption {
+        text-align: center;
+    }
+}
+
+
+@media screen and (min-width:1200px) {
+
+    li {
+        width: 25%;
+    }
+
+    img:hover {
+        transform: scale(1.5) skew(-5deg);
+
+    }
+
+    figcaption {
+        text-align: center;
+    }
+}
